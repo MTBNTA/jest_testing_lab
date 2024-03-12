@@ -128,6 +128,24 @@ describe('divide', () => {
 
 describe('modulus', () => {
 
+  test('can get the modulus of two small positive numbers', () => {
+    expected = 1;
+    actual = modulus(7, 3);
+    expect(actual).toBe(expected);
+  });
+
+  test('can get the modulus of two large positive numbers', () => {
+    expected = 20;
+    actual = modulus(173, 51);
+    expect(actual).toBe(expected);
+  });
+
+  test('can get the modulus of two negative numbers', () => {
+    expected = -1;
+    actual = modulus(-21, -4);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('even', () => {
