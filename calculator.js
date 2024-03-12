@@ -10,13 +10,13 @@ const multiply = function(a, b){
     return a * b
 };
 
-const divide = null;
+const divide = (a, b) => a / b;
 
-const modulus = null;
+const modulus = (a, b) => a % b;
 
-const even = null;
+const even = a => a % 2 === 0;
 
-const odd = null;
+const odd = a => a % 2 === 1;;
 
 module.exports = { 
     sum, 
