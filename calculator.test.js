@@ -94,6 +94,36 @@ describe('multiply', () => {
 
 describe('divide', () => {
 
+  test('can divide two small positive numbers', () => {
+    expected = 2;
+    actual = divide(6, 3);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide two large positive numbers', () => {
+    expected = 5;
+    actual = divide(375, 75);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide two negative numbers', () => {
+    expected = 2;
+    actual = divide(-6, -3);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide zero by a number', () => {
+    expected = 0;
+    actual = divide(0, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('cannot divide by zero', () => {
+    expected = Infinity;
+    actual = divide(2, 0);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('modulus', () => {
