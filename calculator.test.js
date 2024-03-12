@@ -150,6 +150,24 @@ describe('modulus', () => {
 
 describe('even', () => {
 
+  test('can check positive even number', () => {
+    expected = true;
+    actual = even(2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can check positive odd number', () => {
+    expected = false;
+    actual = even(3);
+    expect(actual).toBe(expected);
+  });
+
+  test('can check negative even number', () => {
+    expected = true;
+    actual = even(-2);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('odd', () => {
