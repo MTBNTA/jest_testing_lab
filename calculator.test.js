@@ -17,8 +17,8 @@ describe('sum', () => {
   });
 
   test('can add two large positive numbers', () => { 
-    expected = 1000;
-    actual = sum(550, 450);
+    expected = 100000;
+    actual = sum(55000, 45000);
     expect(actual).toBe(expected);
   });
 
@@ -45,8 +45,8 @@ describe('subtract', () => {
   });
 
   test('can subtract two large positive numbers', () => {
-    expected = 95;
-    actual = subtract(170, 75);
+    expected = 95000;
+    actual = subtract(170000, 75000);
     expect(actual).toBe(expected);
   });
 
@@ -102,7 +102,7 @@ describe('divide', () => {
 
   test('can divide two large positive numbers', () => {
     expected = 5;
-    actual = divide(375, 75);
+    actual = divide(375000, 75000);
     expect(actual).toBe(expected);
   });
 
@@ -124,6 +124,10 @@ describe('divide', () => {
     expect(actual).toBe(expected);
   });
 
+  // Ideas for additional testing:
+  // argument ordering matters
+  // dividing by decimal equivalent to multiplication
+
 });
 
 describe('modulus', () => {
@@ -135,8 +139,8 @@ describe('modulus', () => {
   });
 
   test('can get the modulus of two large positive numbers', () => {
-    expected = 20;
-    actual = modulus(173, 51);
+    expected = 20000;
+    actual = modulus(173000, 51000);
     expect(actual).toBe(expected);
   });
 
@@ -146,20 +150,24 @@ describe('modulus', () => {
     expect(actual).toBe(expected);
   });
 
+  test('modulus with no remainder returns zero', () => {
+    expected = 0;
+    actual = modulus(10, 5);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('even', () => {
 
   test('can check positive even number', () => {
-    expected = true;
     actual = even(2);
-    expect(actual).toBe(expected);
+    expect(actual).toBeTruthy();
   });
 
   test('can check positive odd number', () => {
-    expected = false;
     actual = even(3);
-    expect(actual).toBe(expected);
+    expect(actual).toBeFalsy();
   });
 
   test('can check negative even number', () => {
